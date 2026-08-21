@@ -188,3 +188,22 @@
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+-----
+
+THIRD-PARTY NOTICE (openclaw-zero-token)
+
+This project vendors a substantial portion of the DeepSeek web PoW solver
+from https://github.com/linuxhsj/openclaw-zero-token
+(src/providers/deepseek-web-client.ts: SHA3_WASM_B64, getWasmInstance, solvePow).
+
+Copyright (c) 2025 Peter Steinberger. Licensed under the MIT License.
+
+That third-party work is independently licensed and is not Apache-2.0. The
+original copyright notice and MIT permission notice are preserved at:
+
+  copaw/zero_token/LICENSE-openclaw-zero-token.txt
+
+Nuitka/standalone packages must ship that file next to deepseek_pow.js
+(`copaw/zero_token/LICENSE-openclaw-zero-token.txt`). `copaw zero-token --help`
+and `copaw zero-token start` also print the attribution.

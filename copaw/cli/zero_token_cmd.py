@@ -19,10 +19,22 @@ from ..zero_token.webauth import (
 )
 from ..zero_token.gateway_manager import ensure_running, stop, status
 
+OPENCLAW_ZERO_TOKEN_NOTICE = (
+    "DeepSeek web PoW: Copyright (c) 2025 Peter Steinberger; MIT. "
+    "https://github.com/linuxhsj/openclaw-zero-token "
+    "See copaw/zero_token/LICENSE-openclaw-zero-token.txt"
+)
+
 
 @click.group("zero-token")
 def zero_token_group() -> None:
-    """内置 Zero-Token Node 网关（免 Token Web 模型）。"""
+    """内置 Zero-Token Node 网关（免 Token Web 模型）。
+
+    DeepSeek 网页 PoW 求解器移植自 openclaw-zero-token
+    (Copyright (c) 2025 Peter Steinberger)，MIT License。
+    原仓库：https://github.com/linuxhsj/openclaw-zero-token
+    全文见 copaw/zero_token/LICENSE-openclaw-zero-token.txt。
+    """
 
 
 @zero_token_group.command("start")
@@ -31,34 +43,40 @@ def zt_start(port: int) -> None:
     env = os.environ.copy()
     env["COPAW_ZERO_TOKEN_PORT"] = str(port)
     d = ensure_running(timeout_sec=10.0, env=env)
-    raise SystemExit(
+    click.echo(OPENCLAW_ZERO_TOKEN_NOTICE)
+    click.echo(
         f"zero-token: listening={d['listening']} pid={d['pid']} {d['host']}:{d['port']}"
     )
+    raise SystemExit(0)
 
 
 @zero_token_group.command("stop")
 def zt_stop() -> None:
     d = stop()
-    raise SystemExit(
+    click.echo(
         f"zero-token: listening={d['listening']} pid={d['pid']} {d['host']}:{d['port']}"
     )
+    raise SystemExit(0)
 
 
 @zero_token_group.command("status")
 def zt_status() -> None:
     d = status()
-    raise SystemExit(
+    click.echo(
         f"zero-token: listening={d['listening']} pid={d['pid']} {d['host']}:{d['port']}"
     )
+    raise SystemExit(0)
 
 
 @zero_token_group.command("restart")
 def zt_restart() -> None:
     stop()
     d = ensure_running(timeout_sec=10.0)
-    raise SystemExit(
+    click.echo(OPENCLAW_ZERO_TOKEN_NOTICE)
+    click.echo(
         f"zero-token: listening={d['listening']} pid={d['pid']} {d['host']}:{d['port']}"
     )
+    raise SystemExit(0)
 
 
 @zero_token_group.command("onboard")
