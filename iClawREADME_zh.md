@@ -153,34 +153,45 @@ iClaw 内置多层安全防护机制，保障你的数据与系统安全：
 
 # 第三方开源软件声明
 
-本产品 [iClaw] 版本 [1.0.0] 包含了以下由第三方开发并依据 **Apache License 2.0** 协议授权的开源软件。
+本产品 [iClaw] 版本 [1.0.0] 包含以下第三方开源软件，分别依据 **Apache License 2.0** 与 **MIT License** 授权。
 
 ## 使用的开源组件
 
 ### CoPaw
 - **项目名称**: CoPaw
-- **版权归属**: Copyright 2025 The CoPaw Authors，详见LICENSE文件
+- **版权归属**: Copyright 2025 The CoPaw Authors，详见 LICENSE 文件
 - **来源地址**: https://github.com/agentscope-ai/CoPaw
 - **许可证**: Apache License 2.0
 - **在本软件中的使用方式**: 修改后集成
 - **修改说明**：对 skill 模块进行了功能扩展，新增免费 token 接入模块，支持以 exe 运行、免安装等形态。
 
+### openclaw-zero-token
+- **项目名称**: openclaw-zero-token
+- **版权归属**: Copyright (c) 2025 Peter Steinberger
+- **来源地址**: https://github.com/linuxhsj/openclaw-zero-token
+- **许可证**: MIT License
+- **在本软件中的使用方式**: 移植并集成其中的 DeepSeek 网页 PoW 求解器（`src/providers/deepseek-web-client.ts` 中的 `SHA3_WASM_B64`、`getWasmInstance`、`solvePow`）
+- **完整许可文本**: 分发包中的 `copaw/zero_token/LICENSE-openclaw-zero-token.txt`
+
 ## 许可证与免责声明
 
 ### Apache License 2.0 条款
-本软件使用的上述开源组件遵循 Apache License 2.0 协议。您可以在以下位置获取协议完整副本：
+CoPaw 遵循 Apache License 2.0。完整副本：
 - 本软件分发包中的 `LICENSE` 文件
 - 或访问 https://www.apache.org/licenses/LICENSE-2.0
 
+### MIT License 条款
+openclaw-zero-token 的 DeepSeek PoW 求解器遵循 MIT License。完整版权声明与许可全文见 `copaw/zero_token/LICENSE-openclaw-zero-token.txt`。该 MIT 作品独立授权，不受 Apache-2.0 条款替代。
+
 ### 第三方代码免责声明
-**针对上述列出的第三方开源组件（CoPaw）：**
+**针对上述列出的第三方开源组件（CoPaw、openclaw-zero-token）：**
 这些组件由其原始著作权人按“原样”（AS-IS）提供，不附带任何明示或暗示的担保，包括但不限于对适销性、特定用途适用性及不侵权的担保。原始著作权人不对任何因使用这些组件而导致的损失承担责任。
 
 ### 我方代码的声明
 本产品中除上述第三方组件外，其余代码由 [iClaw团队] 开发或修改。该部分代码按“原样”（AS-IS）提供，不附带任何明示或暗示的担保，包括但不限于对适销性、特定用途适用性及不侵权的担保。在任何情况下，[iClaw团队] 均不对因使用或无法使用该部分代码而导致的任何直接、间接、偶然、特殊或必然的损害（包括但不限于利润损失、数据丢失或业务中断）承担责任，即使已被告知可能发生此类损害。
 
 ## 如何获取完整源代码
-本产品使用的开源组件及其修改版本（如有），其完整源代码可根据 Apache License 2.0 协议的要求获取。请联系：钉钉iclaw001。
+CoPaw 及其修改版本可按 Apache License 2.0 的要求获取。openclaw-zero-token 原仓库为 https://github.com/linuxhsj/openclaw-zero-token 。请联系：钉钉 iclaw001。
 
 ## 致谢
 感谢所有开源作者对开源社区的贡献。

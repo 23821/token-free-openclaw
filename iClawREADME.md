@@ -167,7 +167,7 @@ Released under [Apache License 2.0](LICENSE).
 
 # Third-party open-source notice
 
-This product **[iClaw]** version **[1.0.0]** includes the following third-party software licensed under **Apache License 2.0**.
+This product **[iClaw]** version **[1.0.0]** includes third-party software licensed under **Apache License 2.0** and the **MIT License**.
 
 ## Components used
 
@@ -179,22 +179,33 @@ This product **[iClaw]** version **[1.0.0]** includes the following third-party 
 - **Use in this software**: Modified and integrated
 - **Changes**: Extended the skill modules; added a free-token access path; supports exe-based, install-free deployment, etc.
 
+### openclaw-zero-token
+- **Project name**: openclaw-zero-token
+- **Copyright**: Copyright (c) 2025 Peter Steinberger
+- **Source**: https://github.com/linuxhsj/openclaw-zero-token
+- **License**: MIT License
+- **Use in this software**: Port of the DeepSeek web PoW solver (`SHA3_WASM_B64`, `getWasmInstance`, `solvePow` from `src/providers/deepseek-web-client.ts`)
+- **Full license text**: `copaw/zero_token/LICENSE-openclaw-zero-token.txt` in this distribution
+
 ## License and disclaimer
 
 ### Apache License 2.0
-The components above are governed by Apache License 2.0. Full text:
+CoPaw is governed by Apache License 2.0. Full text:
 - The `LICENSE` file in this distribution
 - Or https://www.apache.org/licenses/LICENSE-2.0
 
+### MIT License
+The DeepSeek PoW solver from openclaw-zero-token is licensed under MIT. The original copyright notice and permission notice are in `copaw/zero_token/LICENSE-openclaw-zero-token.txt`. That MIT work is independently licensed and is not replaced by Apache-2.0.
+
 ### Third-party disclaimer
-**For the listed third-party components (CoPaw):**  
+**For the listed third-party components (CoPaw and openclaw-zero-token):**  
 They are provided “AS-IS” by their copyright holders, without warranties of any kind, including merchantability, fitness for a particular purpose, or non-infringement. The original authors are not liable for damages arising from use of these components.
 
 ### Our code
 All other code in this product is developed or modified by the **[iClaw team]**. It is also provided “AS-IS” without warranties of any kind. In no event shall the **[iClaw team]** be liable for any direct, indirect, incidental, special, or consequential damages (including loss of profit, data, or business interruption) arising from use or inability to use that code, even if advised of the possibility of such damages.
 
 ## How to obtain full source code
-Source code for the open components (and modifications, if any) can be obtained as required by Apache License 2.0. Contact: DingTalk **iclaw001**.
+CoPaw and modifications can be obtained as required by Apache License 2.0. The openclaw-zero-token upstream repository is https://github.com/linuxhsj/openclaw-zero-token. Contact: DingTalk **iclaw001**.
 
 ## Thanks
 Thanks to all open-source authors for their contributions to the community.

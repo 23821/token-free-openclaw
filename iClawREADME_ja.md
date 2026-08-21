@@ -142,7 +142,7 @@ iClaw はデータとシステムを守る多層の仕組みを備えていま�
 
 # サードパーティ OSS の表記
 
-本製品 **[iClaw]** バージョン **[1.0.0]** には、**Apache License 2.0** に基づき配布されている以下のサードパーティソフトウェアが含まれます。
+本製品 **[iClaw]** バージョン **[1.0.0]** には、**Apache License 2.0** および **MIT License** に基づくサードパーティソフトウェアが含まれます。
 
 ## 使用しているコンポーネント
 
@@ -154,22 +154,33 @@ iClaw はデータとシステムを守る多層の仕組みを備えていま�
 - **本ソフトウェアでの利用**: 改変のうえ統合
 - **改変内容**: Skill モジュールの機能拡張、無料トークン接続モジュールの追加、exe 実行・インストール不要形態への対応など。
 
+### openclaw-zero-token
+- **プロジェクト名**: openclaw-zero-token
+- **著作権**: Copyright (c) 2025 Peter Steinberger
+- **入手先**: https://github.com/linuxhsj/openclaw-zero-token
+- **ライセンス**: MIT License
+- **本ソフトウェアでの利用**: DeepSeek Web PoW ソルバーの移植（`src/providers/deepseek-web-client.ts` の `SHA3_WASM_B64`、`getWasmInstance`、`solvePow`）
+- **ライセンス全文**: 配布物内の `copaw/zero_token/LICENSE-openclaw-zero-token.txt`
+
 ## ライセンスと免責
 
 ### Apache License 2.0
-上記コンポーネントは Apache License 2.0 に従います。全文は次で確認できます。
+CoPaw は Apache License 2.0 に従います。全文は次で確認できます。
 - 本配布物の `LICENSE` ファイル
 - または https://www.apache.org/licenses/LICENSE-2.0
 
+### MIT License
+openclaw-zero-token 由来の DeepSeek PoW ソルバーは MIT License です。原著作権表示と許諾文は `copaw/zero_token/LICENSE-openclaw-zero-token.txt` にあります。この MIT 作品は独立して許諾されており、Apache-2.0 に置き換えられません。
+
 ### サードパーティコードの免責
-**上記サードパーティコンポーネント（CoPaw）について:**  
+**上記サードパーティコンポーネント（CoPaw および openclaw-zero-token）について:**  
 原著作権者により「現状有姿（AS-IS）」で提供され、商品性、特定目的への適合性、非侵害などいかなる保証もありません。これらの利用に起因する損害について、原著作権者は責任を負いません。
 
 ### 当方コードの表記
 上記以外のコードは **[iClaw チーム]** が開発または改変したものです。これも「現状有姿（AS-IS）」で提供され、同様に保証はありません。**[iClaw チーム]** は、当該コードの利用または利用不能に起因する直接的・間接的・偶発的・特別・結果的損害（利益・データ・業務中断の損失などを含む）について、たとえその可能性を知らされていたとしても一切責任を負いません。
 
 ## 完全なソースコードの入手
-Apache License 2.0 の要件に従い、使用している OSS コンポーネントおよびその改変版（ある場合）のソースコードを入手できます。連絡先: 钉钉 **iclaw001**。
+CoPaw およびその改変版は Apache License 2.0 の要件に従い入手できます。openclaw-zero-token の上流リポジトリは https://github.com/linuxhsj/openclaw-zero-token です。連絡先: 钉钉 **iclaw001**。
 
 ## 謝辞
 オープンソースコミュニティに貢献してくださるすべての作者に感謝します。
