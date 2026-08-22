@@ -28,7 +28,7 @@ OPENCLAW_ZERO_TOKEN_NOTICE = (
 
 @click.group("zero-token")
 def zero_token_group() -> None:
-    """内置 Zero-Token Node 网关（免 Token Web 模型）。
+    """内置免token 网关（免 Token Web 模型）。
 
     DeepSeek 网页 PoW 求解器移植自 openclaw-zero-token
     (Copyright (c) 2025 Peter Steinberger)，MIT License。
